@@ -8,11 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		244203C420C1541A0027F631 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244203C320C1541A0027F631 /* AppDelegate.swift */; };
-		244203C620C1541A0027F631 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244203C520C1541A0027F631 /* ViewController.swift */; };
+		244203C620C1541A0027F631 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244203C520C1541A0027F631 /* WelcomeViewController.swift */; };
 		244203C920C1541A0027F631 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 244203C720C1541A0027F631 /* Main.storyboard */; };
 		244203CB20C1541A0027F631 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 244203CA20C1541A0027F631 /* Assets.xcassets */; };
 		244203CE20C1541A0027F631 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 244203CC20C1541A0027F631 /* LaunchScreen.storyboard */; };
-		244203D920C1541A0027F631 /* mvvm_exampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244203D820C1541A0027F631 /* mvvm_exampleTests.swift */; };
+		244203E720C15BF00027F631 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244203E620C15BF00027F631 /* NetworkManager.swift */; };
+		244203E920C15D760027F631 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244203E820C15D760027F631 /* NetworkManagerTests.swift */; };
+		244203EB20C15EC70027F631 /* NetworkProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244203EA20C15EC70027F631 /* NetworkProtocols.swift */; };
+		244203ED20C161E10027F631 /* NetworkSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244203EC20C161E10027F631 /* NetworkSessionMock.swift */; };
+		244203F120C18D920027F631 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244203F020C18D920027F631 /* WelcomeViewModel.swift */; };
+		244203F320C195880027F631 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244203F220C195880027F631 /* WelcomeRouter.swift */; };
+		244203F520C196570027F631 /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244203F420C196570027F631 /* Launcher.swift */; };
+		244203F820C1A9600027F631 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244203F720C1A9600027F631 /* ResultsViewController.swift */; };
+		244203FA20C1A96E0027F631 /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244203F920C1A96E0027F631 /* ResultsViewModel.swift */; };
+		244203FC20C1A9840027F631 /* ResultsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244203FB20C1A9840027F631 /* ResultsRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +37,23 @@
 /* Begin PBXFileReference section */
 		244203C020C1541A0027F631 /* mvvm-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvvm-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		244203C320C1541A0027F631 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		244203C520C1541A0027F631 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		244203C520C1541A0027F631 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		244203C820C1541A0027F631 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		244203CA20C1541A0027F631 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		244203CD20C1541A0027F631 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		244203CF20C1541A0027F631 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		244203D420C1541A0027F631 /* mvvm-exampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mvvm-exampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		244203D820C1541A0027F631 /* mvvm_exampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvvm_exampleTests.swift; sourceTree = "<group>"; };
 		244203DA20C1541A0027F631 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		244203E620C15BF00027F631 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		244203E820C15D760027F631 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		244203EA20C15EC70027F631 /* NetworkProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocols.swift; sourceTree = "<group>"; };
+		244203EC20C161E10027F631 /* NetworkSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionMock.swift; sourceTree = "<group>"; };
+		244203F020C18D920027F631 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		244203F220C195880027F631 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
+		244203F420C196570027F631 /* Launcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launcher.swift; sourceTree = "<group>"; };
+		244203F720C1A9600027F631 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		244203F920C1A96E0027F631 /* ResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewModel.swift; sourceTree = "<group>"; };
+		244203FB20C1A9840027F631 /* ResultsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +95,10 @@
 		244203C220C1541A0027F631 /* mvvm-example */ = {
 			isa = PBXGroup;
 			children = (
+				244203E420C15A7F0027F631 /* Network */,
+				244203E320C15A780027F631 /* Model */,
+				244203EE20C18D330027F631 /* Scene */,
 				244203C320C1541A0027F631 /* AppDelegate.swift */,
-				244203C520C1541A0027F631 /* ViewController.swift */,
 				244203C720C1541A0027F631 /* Main.storyboard */,
 				244203CA20C1541A0027F631 /* Assets.xcassets */,
 				244203CC20C1541A0027F631 /* LaunchScreen.storyboard */,
@@ -90,10 +110,65 @@
 		244203D720C1541A0027F631 /* mvvm-exampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				244203D820C1541A0027F631 /* mvvm_exampleTests.swift */,
+				244203E520C15AA60027F631 /* Network */,
 				244203DA20C1541A0027F631 /* Info.plist */,
 			);
 			path = "mvvm-exampleTests";
+			sourceTree = "<group>";
+		};
+		244203E320C15A780027F631 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		244203E420C15A7F0027F631 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				244203E620C15BF00027F631 /* NetworkManager.swift */,
+				244203EA20C15EC70027F631 /* NetworkProtocols.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		244203E520C15AA60027F631 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				244203E820C15D760027F631 /* NetworkManagerTests.swift */,
+				244203EC20C161E10027F631 /* NetworkSessionMock.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		244203EE20C18D330027F631 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				244203F620C1A9310027F631 /* Results */,
+				244203EF20C18D490027F631 /* Welcome */,
+				244203F420C196570027F631 /* Launcher.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		244203EF20C18D490027F631 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				244203C520C1541A0027F631 /* WelcomeViewController.swift */,
+				244203F020C18D920027F631 /* WelcomeViewModel.swift */,
+				244203F220C195880027F631 /* WelcomeRouter.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		244203F620C1A9310027F631 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				244203F720C1A9600027F631 /* ResultsViewController.swift */,
+				244203F920C1A96E0027F631 /* ResultsViewModel.swift */,
+				244203FB20C1A9840027F631 /* ResultsRouter.swift */,
+			);
+			path = Results;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +274,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				244203C620C1541A0027F631 /* ViewController.swift in Sources */,
+				244203EB20C15EC70027F631 /* NetworkProtocols.swift in Sources */,
+				244203F120C18D920027F631 /* WelcomeViewModel.swift in Sources */,
+				244203E720C15BF00027F631 /* NetworkManager.swift in Sources */,
+				244203FA20C1A96E0027F631 /* ResultsViewModel.swift in Sources */,
+				244203F320C195880027F631 /* WelcomeRouter.swift in Sources */,
+				244203C620C1541A0027F631 /* WelcomeViewController.swift in Sources */,
+				244203F520C196570027F631 /* Launcher.swift in Sources */,
+				244203FC20C1A9840027F631 /* ResultsRouter.swift in Sources */,
 				244203C420C1541A0027F631 /* AppDelegate.swift in Sources */,
+				244203F820C1A9600027F631 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +291,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				244203D920C1541A0027F631 /* mvvm_exampleTests.swift in Sources */,
+				244203E920C15D760027F631 /* NetworkManagerTests.swift in Sources */,
+				244203ED20C161E10027F631 /* NetworkSessionMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
