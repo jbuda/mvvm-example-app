@@ -10,11 +10,13 @@ import Foundation
 
 @testable import mvvm_example
 
-class NetworkSessionMock:NetworkSession {
+class NetworkSessionMock:URLSessionProtocol {
+  
   var data:Data?
+  var response:URLResponse?
   var error:Error?
   
-  func load(from url: URL, completionHandler: @escaping (Data?, Error?) -> Void) {
-    completionHandler(data,error)
+  func fetch(with request: URL, completion completionHandler: @escaping (ConnectionResult) -> Void) {
+    completionHandler(ConnectionResult(data,response,error))
   }
 }

@@ -22,6 +22,7 @@
 		244203F820C1A9600027F631 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244203F720C1A9600027F631 /* ResultsViewController.swift */; };
 		244203FA20C1A96E0027F631 /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244203F920C1A96E0027F631 /* ResultsViewModel.swift */; };
 		244203FC20C1A9840027F631 /* ResultsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244203FB20C1A9840027F631 /* ResultsRouter.swift */; };
+		24C638C620D01E5B00A37F48 /* photos.json in Resources */ = {isa = PBXBuildFile; fileRef = 24C638C520D01E5B00A37F48 /* photos.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		244203F720C1A9600027F631 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		244203F920C1A96E0027F631 /* ResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewModel.swift; sourceTree = "<group>"; };
 		244203FB20C1A9840027F631 /* ResultsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsRouter.swift; sourceTree = "<group>"; };
+		24C638C520D01E5B00A37F48 /* photos.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = photos.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		244203D720C1541A0027F631 /* mvvm-exampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				24C638C420D01E4800A37F48 /* Data */,
 				244203E520C15AA60027F631 /* Network */,
 				244203DA20C1541A0027F631 /* Info.plist */,
 			);
@@ -171,6 +174,14 @@
 			path = Results;
 			sourceTree = "<group>";
 		};
+		24C638C420D01E4800A37F48 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				24C638C520D01E5B00A37F48 /* photos.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -216,7 +227,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Janusz;
 				TargetAttributes = {
 					244203BF20C1541A0027F631 = {
@@ -264,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24C638C620D01E5B00A37F48 /* photos.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +352,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -347,6 +360,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -397,6 +411,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -404,6 +419,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

@@ -7,3 +7,21 @@
 //
 
 import Foundation
+
+class ResultsViewModel {
+  
+  lazy var networkService:NetworkManager = {
+    return NetworkManager()
+  }()
+  
+  var searchTerm:String
+  
+  init(with search:String) {
+    searchTerm = search
+  }
+  
+  func fetch() {
+
+  }
+  
+}

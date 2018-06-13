@@ -9,7 +9,7 @@
 import Foundation
 
 protocol WelcomeViewModelType {
-  func searchButtonPress(_ text:String)
+  func searchButtonPress(_ text:String?)
 }
   
 class WelcomeViewModel:WelcomeViewModelType {
@@ -18,8 +18,10 @@ class WelcomeViewModel:WelcomeViewModelType {
     
   }
   
-  func searchButtonPress(_ text:String) {
-    
+  func searchButtonPress(_ text:String?) {
+    /*guard let text = text else {
+      return
+    }*/
   }
   
 }

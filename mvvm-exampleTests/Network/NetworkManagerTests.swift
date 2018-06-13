@@ -10,24 +10,72 @@ import XCTest
 
 @testable import mvvm_example
 
+struct DecodableMock:Decodable {
+  let name:String
+}
+
 class NetworkManagerTests: XCTestCase {
+  
+  func testSuccess200StatusCodeResponse() {
+    let url = URL(fileURLWithPath: "")
     
-  func testSuccessfulResponse() {
+    let session = NetworkSessionMock()
+    session.response = HTTPURLResponse(url: url, statusCode: 200, httpVersion: nil, headerFields: nil)
+    
+    let manager = NetworkManager(session:session)
+    
+    manager.get(from:url,type:DecodableMock.self) {
+      if case .success(_) = $0 { }
+      else {
+        XCTAssertTrue(false,"Error")
+      }
+    }
+  }
+  
+  func testFailedResponse() {
+    let url = URL(fileURLWithPath: "")
+
     let session = NetworkSessionMock()
     let manager = NetworkManager(session:session)
     
-    let data = Data(bytes:[0,1,0,1])
-    session.data = data
-    
-    let url = URL(fileURLWithPath: "")
-    
-    var result:NetworkResult?
-    manager.load(from: url) { result = $0 }
-    
-    if case NetworkResult.success = result! { }
-    else {
-      XCTAssertTrue(false,"error")
+    manager.get(from: url, type: DecodableMock.self) {
+      if case .failure = $0 { }
+      else {
+        XCTAssertTrue(false,"Error")
+      }
     }
   }
+  
+  func testSuccessJsonDecode() {
+    let url = URL(fileURLWithPath: "")
+    let session = NetworkSessionMock()
+    
+    let bundle = Bundle(for: type(of:self))
+
+    guard let file = bundle.path(forResource: "photos", ofType: "json") else {
+      fatalError("File not found")
+    }
+    
+    do {
+      session.data = try Data(contentsOf: URL(fileURLWithPath: file))
+    } catch {
+      fatalError()
+    }
+      
+    session.response = HTTPURLResponse(url: url, statusCode: 200, httpVersion: nil, headerFields: nil)
+  
+    let manager = NetworkManager(session: session)
+    
+    manager.get(from:url,type:[DecodableMock].self) {
+      if case .success(let json) = $0 {
+
+        XCTAssertTrue(json?.count == 4,"Error")
+        XCTAssertTrue(json?[0].name == "Photo 1","Error")
+      } else {
+        XCTAssertTrue(false, "Error")
+      }
+    }
+  }
+  
     
 }

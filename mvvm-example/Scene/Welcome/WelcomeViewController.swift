@@ -36,7 +36,9 @@ extension WelcomeViewController {
   
   @IBAction
   private func searchButtonPress() {
-    print("pRESSED",searchTextField.text!)
+    if let text = searchTextField.text, !text.isEmpty {
+      router.perform(.results, from: self, with:text)
+    }
   }
   
   private func setupViewModel() { }

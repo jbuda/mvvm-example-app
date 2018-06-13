@@ -8,14 +8,17 @@
 
 import Foundation
 
-protocol NetworkSession {
-  func load(from url:URL,completionHandler:@escaping (Data?,Error?) -> Void)
+typealias ConnectionResult = (data:Data?,response:URLResponse?,error:Error?)
+
+protocol URLSessionProtocol {
+  func fetch(with request:URL, completion completionHandler:@escaping (ConnectionResult) -> Void)
 }
 
-extension URLSession:NetworkSession {
-  func load(from url: URL, completionHandler: @escaping (Data?, Error?) -> Void) {
-    let task = dataTask(with: url) { (data,_,error) in
-      completionHandler(data,error)
+extension URLSession:URLSessionProtocol {
+  
+  func fetch(with request:URL, completion completionHandler:@escaping (ConnectionResult) -> Void) {
+    let task = dataTask(with: request) { data,response,error in
+      completionHandler(ConnectionResult(data,response,error))
     }
     
     task.resume()

@@ -8,25 +8,42 @@
 
 import Foundation
 
-enum NetworkResult {
-  case success(Data)
+enum NetworkResult<T> {
+  case success(T?)
   case failure
 }
 
 class NetworkManager {
   
-  private let session:NetworkSession
+  let session:URLSessionProtocol
   
-  init(session:NetworkSession = URLSession.shared) {
+  init(session:URLSessionProtocol = URLSession.shared) {
     self.session = session
   }
   
-  func load(from url:URL,completionHandler:@escaping (NetworkResult) -> Void) {
-    session.load(from: url) { data,error in
+  func get<T:Decodable>(from request:URL,type decoding:T.Type, completion completionHandler:@escaping (NetworkResult<T>) -> Void) {
+    session.fetch(with: request) { (result:ConnectionResult) in
       
-      let result = data.map(NetworkResult.success) ?? .failure
+      guard let response = result.response as? HTTPURLResponse else {
+        completionHandler(NetworkResult.failure)
+        return
+      }
       
-      completionHandler(result)
+      guard let data = result.data else {
+        completionHandler(NetworkResult.failure)
+        return
+      }
+      
+      if 200 ..< 300 ~= response.statusCode {
+        do {
+          let json = try JSONDecoder().decode(decoding, from: data)
+          
+          completionHandler(NetworkResult.success(json))
+        } catch {
+          completionHandler(NetworkResult.failure)
+        }
+      }
+      
     }
   }
 }
