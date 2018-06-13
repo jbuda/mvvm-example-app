@@ -29,12 +29,13 @@ class NetworkManager {
         return
       }
       
-      guard let data = result.data else {
-        completionHandler(NetworkResult.failure)
-        return
-      }
-      
-      if 200 ..< 300 ~= response.statusCode {
+      if 200 ..< 300 ~= response.statusCode {        
+        
+        guard let data = result.data else {
+          completionHandler(NetworkResult.failure)
+          return
+        }
+        
         do {
           let json = try JSONDecoder().decode(decoding, from: data)
           
@@ -42,6 +43,8 @@ class NetworkManager {
         } catch {
           completionHandler(NetworkResult.failure)
         }
+      } else {
+        completionHandler(NetworkResult.failure)
       }
       
     }

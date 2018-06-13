@@ -21,7 +21,11 @@ class ResultsViewModel {
   }
   
   func fetch() {
-
+    let url = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=__&text=\(searchTerm)&format=json&nojsoncallback=?"
+   
+    networkService.get(from: URL(string: url)!, type: Photos.self) {
+        print($0)
+    }
   }
   
 }

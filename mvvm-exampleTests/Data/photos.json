@@ -1,6 +1,43 @@
-[
- {"name":"Photo 1"},
- {"name":"Photo 2"},
- {"name":"Photo 3"},
- {"name":"Photo 4"}
-]
+{
+  "stat": "ok",
+  "photos": {
+    "page": 1,
+    "pages": 4985,
+    "photo": [
+      {
+        "secret": "30e2ace84b",
+        "owner": "52448841@N04",
+        "farm": 1,
+        "id": "42775359771",
+        "server": "895",
+        "title": "",
+        "isfriend": 0,
+        "isfamily": 0,
+        "ispublic": 1
+      },
+      {
+        "secret": "2a07044300",
+        "owner": "140884837@N07",
+        "farm": 2,
+        "id": "40964127630",
+        "server": "1731",
+        "title": "biserica-in-frunze",
+        "isfriend": 0,
+        "isfamily": 0,
+        "ispublic": 1
+      },
+      {
+        "secret": "5f45f80b67",
+        "owner": "12446498@N06",
+        "farm": 1,
+        "id": "40964124770",
+        "server": "899",
+        "title": "Mallorca 058",
+        "isfriend": 0,
+        "isfamily": 0,
+        "ispublic": 1
+      }
+    ]
+  }
+}
+              

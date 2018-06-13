@@ -9,7 +9,7 @@
 import UIKit
 
 class ResultsViewController: UIViewController {
-
+  
   var vm:ResultsViewModel?
   
   static func instantiate() -> ResultsViewController {
@@ -18,11 +18,11 @@ class ResultsViewController: UIViewController {
     return vc
   }
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    // Do any additional setup after loading the view.
+  }
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
@@ -30,11 +30,11 @@ class ResultsViewController: UIViewController {
     vm?.fetch()
     //print("I need to do a search for - \(String(describing: vm?.searchTerm))")
   }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+  
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
+  
+  
 }
